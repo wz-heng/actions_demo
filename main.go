@@ -11,7 +11,7 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Print("hello")
 	http.HandleFunc("/", HelloHandler)
 	http.ListenAndServe(":8000", nil)
-	log.Print("hello")
 }
